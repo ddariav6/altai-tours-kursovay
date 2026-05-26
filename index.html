@@ -31,8 +31,8 @@
         .first-block::before { content: ""; position: absolute; inset: 0; 
         background: url("images/фото_первый_блок_фон.png") center/cover no-repeat, url("images/тень_первый_блок.png") center/cover no-repeat; z-index: 0; }
         .first-block > * { position: relative; z-index: 1; }
-        .top-png { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; display: flex; justify-content: center; }
-        .top-png img { width: 100%; max-width: 1728px; display: block; }
+        .top-png { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; }
+        .top-png img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; }
         .menu { position: absolute; top: 5%; left: 0; width: 100%; z-index: 3; display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; list-style: none; font-size: clamp(12px,2vw,18px); padding: 0 20px; }
         .menu a { color: #fff; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; transition: .3s; -webkit-text-stroke: 0px; text-stroke: 0px; }
         .menu a:hover { opacity: .7; }
@@ -138,20 +138,6 @@
             .tour-card h3 { font-size: 24px; }
             .gradient-between-1, .gradient-between-2 { height: 60px; }
             
-            /* Увеличение наложенного изображения (тени) на мобильных */
-            .top-png {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 35%;
-            }
-            .top-png img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            
             /* Увеличение расстояния между линиями */
             .contact-questions {
                 margin-bottom: 50px;
@@ -167,11 +153,6 @@
             .gradient-between-1, .gradient-between-2 { height: 40px; }
             .description-image { max-width: 100%; }
             .contact-form-col { padding: 25px; }
-            
-            /* Ещё больше увеличиваем тень на очень маленьких экранах */
-            .top-png {
-                height: 45%;
-            }
             
             /* Ещё больше увеличиваем расстояние между линиями */
             .line {
