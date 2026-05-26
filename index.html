@@ -124,6 +124,7 @@
             .contact-text-col { text-align: center; }
             .line-short, .line-full { margin: 0 auto; }
         }
+        
         @media (max-width: 768px) {
             .menu { gap: 15px; top: 3%; }
             .menu a { font-size: 10px; letter-spacing: 1px; }
@@ -136,13 +137,46 @@
             .tour-card { padding: 30px 20px; }
             .tour-card h3 { font-size: 24px; }
             .gradient-between-1, .gradient-between-2 { height: 60px; }
+            
+            /* Увеличение наложенного изображения (тени) на мобильных */
+            .top-png {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 35%;
+            }
+            .top-png img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            /* Увеличение расстояния между линиями */
+            .contact-questions {
+                margin-bottom: 50px;
+            }
+            .line {
+                margin-bottom: 35px;
+            }
         }
+        
         @media (max-width: 576px) {
             .menu { gap: 10px; top: 15px; }
             .menu a { font-size: 8px; letter-spacing: 0; }
             .gradient-between-1, .gradient-between-2 { height: 40px; }
             .description-image { max-width: 100%; }
             .contact-form-col { padding: 25px; }
+            
+            /* Ещё больше увеличиваем тень на очень маленьких экранах */
+            .top-png {
+                height: 45%;
+            }
+            
+            /* Ещё больше увеличиваем расстояние между линиями */
+            .line {
+                margin-bottom: 45px;
+            }
         }
     </style>
 </head>
